@@ -1,5 +1,12 @@
 import java.util.Scanner;
-
+/**
+ * Exercise: Numbers
+ * An application class that asks the user to enter a number of digits as words
+ * and then prints them out as a single integer
+ * Sample test input: Input number written digit by digit, each digit separated by a space, when you're done press Enter:
+ * one five zero
+ * Sample test output: 150
+ */
 public class Application {
     public static void main(String[] args) {
         System.out.println("Note: Type any digit for exit inserting\n Input number written digit by digit, each digit separated by a space, when you're done press Enter: ");
