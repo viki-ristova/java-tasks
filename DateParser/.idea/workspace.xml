@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b4e6f4c-a2da-471c-9b73-04ae0b7e918d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../BoxVolume/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Numbers/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../YearlyCalendar/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../YearlyCalendar/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../YearlyCalendar/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../YearlyCalendar/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../YearlyCalendar/YearlyCalendar.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BoxVolume/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BoxVolume/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BoxVolume/out/production/BoxVolume/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BoxVolume/out/production/BoxVolume/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BoxVolume/out/production/BoxVolume/Box.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BoxVolume/out/production/BoxVolume/Box.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BoxVolume/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BoxVolume/src/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BoxVolume/src/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BoxVolume/src/Box.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DateParser/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DateParser/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Numbers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Numbers/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Numbers/out/production/Numbers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Numbers/out/production/Numbers/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Numbers/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Numbers/src/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,49 +64,13 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="21" key="#Project_Structure" timestamp="1583787731188">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1600061681221">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="21" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1583787731188" />
-    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583787718545">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1600061681221" />
+    <state x="65" y="0" key="new project wizard" timestamp="1600083773719">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1583787718545" />
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1583761277700">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583761277700" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1583853892291">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583853892291" />
-    <state width="609" height="168" key="GridCell.Tab.0.bottom" timestamp="1583853893538">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="609" height="168" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583853893538" />
-    <state width="1340" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583761114445" />
-    <state width="609" height="168" key="GridCell.Tab.0.center" timestamp="1583853893537">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="609" height="168" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583853893537" />
-    <state width="1340" height="266" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583761114445" />
-    <state width="609" height="168" key="GridCell.Tab.0.left" timestamp="1583853893537">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="609" height="168" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583853893537" />
-    <state width="1340" height="266" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583761114445" />
-    <state width="609" height="168" key="GridCell.Tab.0.right" timestamp="1583853893538">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="609" height="168" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583853893538" />
-    <state width="1340" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583761114445" />
-    <state x="661" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1583757001470">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="661" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583757001470" />
-    <state x="342" y="140" key="new project wizard" timestamp="1583761496523">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1583761496523" />
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1600083773719" />
   </component>
 </project>
