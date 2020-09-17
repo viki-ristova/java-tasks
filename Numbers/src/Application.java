@@ -9,10 +9,10 @@ import java.util.Scanner;
  */
 public class Application {
     public static void main(String[] args) {
-        System.out.println("Note: Type any digit for exit inserting\n Input number written digit by digit, each digit separated by a space, when you're done press Enter: ");
+        System.out.println("Input number written digit by digit, each digit separated by a space, when you're done press Enter: ");
         Scanner sc = new Scanner(System.in);
-        while(sc.hasNext() && !sc.hasNextInt()) {
-            String number = sc.next();
+        String[]  numbersArray = sc.nextLine().split("\\s+");
+        for(String number : numbersArray){
             switch (number) {
                 case "one":
                     System.out.print("1");
@@ -47,9 +47,9 @@ public class Application {
                 default:
                     System.out.println();
 
+                    break;
             }
-            //sc.close();
-
+            sc.close();
         }
         }
     }
