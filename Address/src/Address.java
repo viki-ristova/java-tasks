@@ -11,11 +11,11 @@ public class Address {
         this.street = street;
         this.streetNumber = streetNumber;
         this.city = city;
-        if(getNumberOfDigitsForNumber(zipCode) == 5 || getNumberOfDigitsForNumber(zipCode) == 9) {
+        if(isValidZipCode(zipCode)) {
             this.zipCode = zipCode;
         } else
         {
-            throw new InvalidZipCodeException("The zip code is invalid. It should consist 5 or 9 digits.");
+            throw new InvalidZipCodeException("The zip code is invalid. It should consist of 5 or 9 digits.");
         }
     }
 
@@ -48,10 +48,10 @@ public class Address {
     }
 
     public void setZipCode(Integer zipCode) throws InvalidZipCodeException {
-        if(getNumberOfDigitsForNumber(zipCode) == 5 || getNumberOfDigitsForNumber(zipCode) == 9) {
+        if(isValidZipCode(zipCode)) {
             this.zipCode = zipCode;
         } else {
-            throw new InvalidZipCodeException("The zip code is invalid. It should consist 5 or 9 digits.");
+            throw new InvalidZipCodeException("The zip code is invalid. It should consist of 5 or 9 digits.");
         }
     }
 
@@ -64,12 +64,7 @@ public class Address {
                 ", zipCode=" + zipCode +
                 '}';
     }
-
-    public int getNumberOfDigitsForNumber(Integer number){
-        int digitsNumber =0;
-        for(digitsNumber = 0;number!=0;digitsNumber++){
-            number/=10;
-        }
-        return digitsNumber;
+    public boolean isValidZipCode(Integer number){
+        return String.valueOf(number).length() == 5 || String.valueOf(number).length() == 9;
     }
 }
