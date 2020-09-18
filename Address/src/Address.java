@@ -8,15 +8,10 @@ public class Address {
     }
 
     public Address(String street, Integer streetNumber, String city, Integer zipCode) throws InvalidZipCodeException {
-        this.street = street;
-        this.streetNumber = streetNumber;
-        this.city = city;
-        if(isValidZipCode(zipCode)) {
-            this.zipCode = zipCode;
-        } else
-        {
-            throw new InvalidZipCodeException("The zip code is invalid. It should consist of 5 or 9 digits.");
-        }
+        setStreet(street);
+        setStreetNumber(streetNumber);
+        setCity(city);
+        setZipCode(zipCode);
     }
 
     public String getStreet() {
@@ -48,7 +43,7 @@ public class Address {
     }
 
     public void setZipCode(Integer zipCode) throws InvalidZipCodeException {
-        if(isValidZipCode(zipCode)) {
+        if (isValidZipCode(zipCode)) {
             this.zipCode = zipCode;
         } else {
             throw new InvalidZipCodeException("The zip code is invalid. It should consist of 5 or 9 digits.");
@@ -64,7 +59,8 @@ public class Address {
                 ", zipCode=" + zipCode +
                 '}';
     }
-    public boolean isValidZipCode(Integer number){
+
+    public boolean isValidZipCode(Integer number) {
         return String.valueOf(number).length() == 5 || String.valueOf(number).length() == 9;
     }
 }
