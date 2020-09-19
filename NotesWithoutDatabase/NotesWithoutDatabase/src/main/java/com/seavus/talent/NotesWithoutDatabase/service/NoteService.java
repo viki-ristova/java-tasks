@@ -35,16 +35,7 @@ public class NoteService {
     }
 
     public void updateNote(Long id, Note note) {
-        List<Note> notes = noteRepository.findAll();
-        /*for(int i = 0; i< notes.size(); i++){
-            Note n = notes.get(i);
-            if(n.getId().equals(id)){
-                note.setId(id);
-                notes.set(i,note);
-            }
-        }*/
-        Optional<Note> result =
-                notes.stream()
+                noteRepository.findAll().stream()
                         .filter(n -> n.getId().equals(id))
                         .peek(n -> n.setTitle(note.getTitle()))
                         .peek(n -> n.setContent(note.getContent()))
