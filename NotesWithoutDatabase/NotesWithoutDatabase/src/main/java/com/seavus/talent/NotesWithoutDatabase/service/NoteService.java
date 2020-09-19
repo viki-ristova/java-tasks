@@ -13,31 +13,41 @@ public class NoteService {
     private NoteRepository noteRepository;
 
     @Autowired
-    public NoteService(NoteRepository noteRepository){
+    public NoteService(NoteRepository noteRepository) {
         this.noteRepository = noteRepository;
     }
-    public void createNote(String title, String content){
-        Note note = new Note(title,content);
+
+    public void createNote(String title, String content) {
+        Note note = new Note(title, content);
         noteRepository.save(note);
     }
-    public Optional<Note> findNote(Long id){
+
+    public Optional<Note> findNote(Long id) {
         return noteRepository.findById(id);
     }
-    public List<Note> findNotes(){
+
+    public List<Note> findNotes() {
         return noteRepository.findAll();
     }
-    public void deleteNote(Long id){
+
+    public void deleteNote(Long id) {
         noteRepository.delete(id);
     }
 
     public void updateNote(Long id, Note note) {
         List<Note> notes = noteRepository.findAll();
-        for(int i = 0; i< notes.size(); i++){
+        /*for(int i = 0; i< notes.size(); i++){
             Note n = notes.get(i);
             if(n.getId().equals(id)){
                 note.setId(id);
                 notes.set(i,note);
             }
-        }
+        }*/
+        Optional<Note> result =
+                notes.stream()
+                        .filter(n -> n.getId().equals(id))
+                        .peek(n -> n.setTitle(note.getTitle()))
+                        .peek(n -> n.setContent(note.getContent()))
+                        .findFirst();
     }
 }
