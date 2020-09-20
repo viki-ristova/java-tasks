@@ -10,10 +10,6 @@ public class Application {
         if (c == 1) {
             ZipArchiver zipArchiver = new ZipArchiver();
             File arc = new File("archive.zip");
-            //arc.getParentFile().mkdirs();
-            //if (!arc.exists()) {
-            //    arc.createNewFile();
-            //}
             zipArchiver.archive(dir, arc);
             System.out.println("Zip archive created successfully!");
         } else if (c == 2) {
