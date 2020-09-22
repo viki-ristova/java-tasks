@@ -12,7 +12,7 @@ public class ZipArchiver implements Archiver {
     @Override
     public void archive(File directory, File archive) throws IOException {
         // Create zip file stream.
-        try (ZipArchiveOutputStream archiveZip = new ZipArchiveOutputStream(new FileOutputStream(archive.getAbsolutePath()))) {
+        ZipArchiveOutputStream archiveZip = new ZipArchiveOutputStream(new FileOutputStream(archive.getAbsolutePath()));
             // Walk through file structure of the given directory
             Files.walk(directory.toPath()).forEach(p -> {
                 File file = p.toFile();
@@ -30,8 +30,5 @@ public class ZipArchiver implements Archiver {
                 }
             });
             archiveZip.finish();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }
