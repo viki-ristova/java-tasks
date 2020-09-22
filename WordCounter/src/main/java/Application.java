@@ -33,11 +33,10 @@ public class Application  {
         Map<String, Integer> countWords = new HashMap<>();
         List<String> stringFileList = Arrays.asList(strArr);
         for (String word : stringFileList) {
-            int num = 0;
             if (!countWords.containsKey(word)) { //first time a word occurs
                 countWords.put(word, 1);
             } else {
-                num = countWords.get(word);
+                int num = countWords.get(word);
                 countWords.put(word, ++num);
             }
         }
