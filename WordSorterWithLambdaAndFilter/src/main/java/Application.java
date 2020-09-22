@@ -57,33 +57,22 @@ public class Application {
         System.out.println("Please enter the maximum value for word length... and press enter");
         max = new Scanner(System.in).nextInt();
 
-        List<String> sortedWordsByLengthAsc = stringFileList.stream()
-                .filter(ch -> c.equalsIgnoreCase("a"))
-                .map(word -> word.replaceAll("[^a-z A-Z]", ""))
-                .distinct()
-                .sorted(Comparator.comparingInt(String::length))
-                .filter(x -> (max > 0) ? (x.length() >= min && x.length() <= max) : (x.length() >= min))
-                .collect(Collectors.toList());
-
-        List<String> sortedWordsByLengthDesc = stringFileList.stream()
-                .filter(ch -> c.equalsIgnoreCase("d"))
+        List<String> sortedWordsByLength = stringFileList.stream()
                 .map(word -> word.replaceAll("[^a-z A-Z]", ""))
                 .distinct()
                 .filter(x -> (max > 0) ? (x.length() >= min && x.length() <= max) : (x.length() >= min))
-                .sorted(Comparator.comparingInt(String::length)
-                        .reversed())
                 .collect(Collectors.toList());
 
         if (c.equalsIgnoreCase("a")) {
             System.out.println("The sorted list in ascending order: ");
-            sortedWordsByLengthAsc.stream().forEach(System.out::println);
-            //System.out.println(sortedWordsByLengthAsc);
-            System.out.println("Total unique words: " + sortedWordsByLengthAsc.size());
+            sortedWordsByLength.sort((w1, w2) -> w1.length() - w2.length());
+            sortedWordsByLength.stream().forEach(System.out::println);
+            System.out.println("Total unique words: " + sortedWordsByLength.size());
         } else if (c.equalsIgnoreCase("d")) {
-            System.out.println("The sorted list in ascending order: ");
-            sortedWordsByLengthDesc.stream().forEach(System.out::println);
-            // System.out.println(sortedWordsByLengthDesc);
-            System.out.println("Total unique words: " + sortedWordsByLengthDesc.size());
+            System.out.println("The sorted list in descending order: ");
+            sortedWordsByLength.sort((w1, w2) -> w2.length() - w1.length());
+            sortedWordsByLength.stream().forEach(System.out::println);
+            System.out.println("Total unique words: " + sortedWordsByLength.size());
         }
     }
 }
