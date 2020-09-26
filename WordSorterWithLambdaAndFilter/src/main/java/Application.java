@@ -44,9 +44,14 @@ import java.util.stream.Collectors;
  *
  */
 public class Application {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         File file = new File("file.txt");
-        String stringFile = FileUtils.readFileToString(file, "UTF-8");
+        String stringFile = null;
+        try {
+            stringFile = FileUtils.readFileToString(file, "UTF-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         String strArr[] = stringFile.toLowerCase().split("\\s+");
         List<String> stringFileList = Arrays.asList(strArr);
         final int min, max;
