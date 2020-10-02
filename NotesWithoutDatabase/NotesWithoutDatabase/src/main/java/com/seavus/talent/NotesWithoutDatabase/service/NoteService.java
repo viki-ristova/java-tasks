@@ -17,9 +17,10 @@ public class NoteService {
         this.noteRepository = noteRepository;
     }
 
-    public void createNote(String title, String content) {
+    public Note createNote(String title, String content) {
         Note note = new Note(title, content);
         noteRepository.save(note);
+        return note;
     }
 
     public Optional<Note> findNote(Long id) {
@@ -34,8 +35,8 @@ public class NoteService {
         noteRepository.delete(id);
     }
 
-    public void updateNote(Long id, Note note) {
-                noteRepository.findAll().stream()
+    public Optional<Note> updateNote(Long id, Note note) {
+               return noteRepository.findAll().stream()
                         .filter(n -> n.getId().equals(id))
                         .peek(n -> n.setTitle(note.getTitle()))
                         .peek(n -> n.setContent(note.getContent()))

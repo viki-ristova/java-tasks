@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class NoteController {
@@ -24,8 +25,8 @@ public class NoteController {
     }
 
     @PostMapping("/api/notes")
-    public void createNote(@RequestBody CreateNoteRequest request){
-        noteService.createNote(request.title,request.content);
+    public Note createNote(@RequestBody CreateNoteRequest request){
+        return noteService.createNote(request.title,request.content);
     }
 
     @GetMapping("/api/notes/{id}")
@@ -38,15 +39,14 @@ public class NoteController {
         return noteService.findNotes();
     }
 
-    //@DeleteMapping("/api/notes/{id}")
-    @RequestMapping(method = RequestMethod.DELETE,value = "/api/notes/{id}")
+    @DeleteMapping("/api/notes/{id}")
     public void deleteNote(@PathVariable Long id){
         noteService.deleteNote(id);
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/api/notes/{id}")
-    public void updateNote(@RequestBody Note note, @PathVariable Long id){
-        noteService.updateNote(id, note);
+    @PutMapping("/api/notes/{id}")
+    public Optional<Note> updateNote(@RequestBody Note note, @PathVariable Long id){
+        return noteService.updateNote(id, note);
 
     }
 }
