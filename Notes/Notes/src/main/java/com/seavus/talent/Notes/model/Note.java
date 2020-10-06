@@ -1,17 +1,23 @@
 package com.seavus.talent.Notes.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Note {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long Id;
     private String title;
     private String content;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToMany
+    private List<Tag> tags;
 
     public Note() {
 
@@ -20,6 +26,19 @@ public class Note {
     public Note(String title, String content) {
         this.title = title;
         this.content = content;
+    }
+
+    public Note(String title, String content, User user) {
+        this.title = title;
+        this.content = content;
+        this.user=user;
+    }
+
+    public Note(String title, String content, User user, List<Tag> tags) {
+        this.title = title;
+        this.content = content;
+        this.user = user;
+        this.tags = tags;
     }
 
     public Long getId() {
@@ -44,6 +63,22 @@ public class Note {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
     }
 
     @Override
